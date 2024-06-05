@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+            background-color: #001e4d;
+        }
+        .container {
+            background-color: #fff;
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 0;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .container h1 {
+            font-size: 25px;
+            color: #001e4d;
+            font-weight: 600;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        form {
+            padding: 20px 0;
+        }
+        form label {
+            display: block;
+            font-size: 18px;
+            color: #001e4d;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #222;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #001e4d;
+            color: #fff;
+            font-weight: 500;
+            width: 100%;
+            border: 0;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+</style>
+
+<body>
+    <div class="container">
+        <h1>User Information</h1>
+        <form id="userinfo-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="zodiac">Zodiac Sign:</label>
+            <input type="text" id="zodiac" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="userinfo.js"></script>
+</body>
+</html>

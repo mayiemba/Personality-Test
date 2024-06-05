@@ -135,28 +135,34 @@ function handleNextButtonClick() {
 
 startQuiz();
 
+function showScore() {
+    localStorage.setItem('totalScore', score);
+    window.location.href = "userinfo.html";  // Update the redirection to the new page
+}
+
+
 const result = getElementById('results');
 
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname.endsWith("result.html")) {
-        const name = localStorage.getItem('name');
-        const zodiac = localStorage.getItem('zodiac');
-        const totalScore = localStorage.getItem('totalScore');
+// document.addEventListener("DOMContentLoaded", function() {
+//     if (window.location.pathname.endsWith("result.html")) {
+//         const name = localStorage.getItem('name');
+//         const zodiac = localStorage.getItem('zodiac');
+//         const totalScore = parseInt(localStorage.getItem('totalScore'));
 
-        let resultText = '';
-        if (totalScore <= 0) {
-            resultText = 'Your personality is calm and collected.';
-        } else if (totalScore <= 5) {
-            resultText = 'Your personality is balanced and thoughtful.';
-        } else if(totalScore <= 10) {
-            resultText = 'Your personality is energetic and enthusiastic.';
-        } else if (totalScore <= 15){
-            resultText = 'Your are good.'
-        } else if(totalScore <= 20){
-            resultText = 'Your very good.'
-        } else {
-           resultText = 'Your excellent.' 
-        }
+//         let resultText = '';
+//         if (totalScore <= 0) {
+//             resultText = 'Your personality is calm and collected.';
+//         } else if (totalScore <= 5) {
+//             resultText = 'Your personality is balanced and thoughtful.';
+//         } else if(totalScore <= 10) {
+//             resultText = 'Your personality is energetic and enthusiastic.';
+//         } else if (totalScore <= 15){
+//             resultText = 'Your are good.'
+//         } else if(totalScore <= 20){
+//             resultText = 'Your very good.'
+//         } else {
+//            resultText = 'Your excellent.' 
+//         }
 
         const zodiacData = {
             "Aries": "Aries are known for their courage and determination.",
@@ -175,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const zodiacInfo = zodiacData[zodiac] || 'Unknown zodiac sign.';
 
-        document.getElementById('resultText').textContent = resultText;
         document.getElementById('zodiacInfo').textContent = zodiacInfo;
-    }
-});
+ //  }
+// });
